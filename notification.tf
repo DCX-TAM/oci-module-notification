@@ -7,6 +7,6 @@ resource "oci_ons_notification_topic" "test_notification_topic" {
     name = each.key
 
     #Optional
-    freeform_tags  = each.value["tags"]
+    #freeform_tags  = each.value["tags"]
 }
 
