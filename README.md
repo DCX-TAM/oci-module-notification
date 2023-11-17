@@ -6,9 +6,6 @@ O Oracle Cloud Infrastructure (OCI) Notifications é um serviço de publicação
 
 ## Como utilizar o módulo (H2)
 
-
-## Como utilizar o módulo (H2)
-
 No arquivo **main.tf** do terraform, realizar a declaração do módulo conforme mostrado abaixo
 
 ```hcl
