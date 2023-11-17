@@ -6,22 +6,24 @@ O Oracle Cloud Infrastructure (OCI) Notifications é um serviço de publicação
 
 No arquivo main.tf do terraform, realizar a declaração do módulo conforme mostrado abaixo
 
-
-`module "notification" {
+```hcl
+module "notification" {
     source = "github.com/DCX-TAM/oci-module-notification"
 
     compartment_id = var.compartment_id
     notification_topics = var.notification_topics
     
-}`
+}
+```
 
 Depois de declarar o módulo no main, é necessário criar a variable notification_topics, no arquivo variables.tf crie sua declaração:
-
-`variable "notification_topics" {}`
-
+```hcl
+variable "notification_topics" {}
+```
 E para criar todos os notification topics desejado basta no arquivo terraform.tfvars, declarar os valores para as variáveis da seguinte maneira
 
-`notification_topics = {
+```hcl
+notification_topics = {
     topic01 = {
         name = "DCX-Tracking"
         tags = {
@@ -36,7 +38,8 @@ E para criar todos os notification topics desejado basta no arquivo terraform.tf
     #        department  = "tam"
     #    } 
     #},
-}`
+}
+```
 
 Para criar mais de um tópico basta descomentar e continuar acrestando os blocos de variáveis em sequência
 
