@@ -1,8 +1,8 @@
 variable "compartment_id" {}
-variable "notification_topic_name" {
-    type = map(object ({
-        name = string
-       # tags = map(string)
-    })
-    )
+variable "notification_topics" {
+    type = map(object({
+      name = string
+      tags = map(string)
+    }))
+  
 }

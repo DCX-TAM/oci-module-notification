@@ -1,12 +1,13 @@
 # Criação Notification
 
 resource "oci_ons_notification_topic" "test_notification_topic" {
-    for_each = var.notification_topic_name
+    for_each = var.notification_topics
     #Required
     compartment_id = var.compartment_id
-    name = each.key.value
+    name = each.key
 
     #Optional
-    #freeform_tags  = each.value["tags"]
+
+    freeform_tags = each.value["tags"]
 }
 
